@@ -2,30 +2,20 @@ package br.com.dio.desafio.GFT;
 
 import java.time.LocalDate;
 
-public class Mentoria {
-	String titulo;
-	String descricao;
+public class Mentoria extends Conteudo {
 	LocalDate data;
 	
 	
-	
+	@Override
+	public double calcularXp() {
+		return XP_PADRAO= 20D;
+	}
 	public Mentoria() {
 		
 	}
 	
 	
-	public String getTitulo() {
-		return titulo;
-	}
-	public void setTitulo(String titulo) {
-		this.titulo = titulo;
-	}
-	public String getDescricao() {
-		return descricao;
-	}
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
-	}
+	
 	public LocalDate getData() {
 		return data;
 	}
@@ -34,8 +24,13 @@ public class Mentoria {
 	}
 	@Override
 	public String toString() {
-		return "Mentorias [titulo=" + titulo + ", descricao=" + descricao + ", data=" + data + "]";
+		return "\n===\tMENTORIAS\t=== \nTítulo: " + getTitulo() +
+				"\n" + getDescricao() + 
+				"\nData Inscrição: " + data + "";
 	}
+
+
+	
 
 	
 	
